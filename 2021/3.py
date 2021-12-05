@@ -70,9 +70,9 @@ def most_common_bit_oxygen(bits, position) -> List[str]:
 def least_common_bit_co2(bits, position) -> List[str]:
     """
     Takes a list of binary numbers and return a filtered list containing only the numbers with the least common bit. If equal, 0 is prioritized.
-    params:
-    * bits: List[str]
-    * position: int
+    :params bits: List of binary numbers
+    bits: List[str]
+    position: int
     """
     zero, one = 0, 0  # Count number of 0's and 1's to find least common bit
 
@@ -94,15 +94,16 @@ def least_common_bit_co2(bits, position) -> List[str]:
     return filtered
 
 
-def oxygen_generator_rating(bits) -> int:
+def oxygen_generator_rating(bits: List[str]) -> int:
     """
-    Calculates the oxygen generator rating from a list of binary numbers represented as strings. 
-    Filters the list of binaries until only one binary number remains - the oxygen generator rating.
+    Calculates the oxygen generator rating.
+    Filters the list of binaries until only one binary number remains.
 
     Iterate through each position, and filter the list of numbers keeping only the most common bit.
 
-    params:
-    * bits: List[str]
+    :params List[str] bits: List of binary numbers
+    :return: Oxygen generator rating
+    :rtype: int
     """
     n = bits[0]
     for index, number in enumerate(n):
@@ -113,15 +114,15 @@ def oxygen_generator_rating(bits) -> int:
     return int(bits[0], 2)
 
 
-def co2_scrubber_rating(bits) -> int:
+def co2_scrubber_rating(bits: List[str]) -> int:
     """
-    Calculates the CO2 scrubber rating from a list of binary numbers represented as strings. 
-    Filters the list of binaries until only one binary number remains - the CO2 scrubber rating.
-
+    Calculate the CO2 scrubber rating.
+    Filters the list of binaries until only one binary number remains. 
     Iterate through each position, and filter the list of numbers keeping only the least common bit.
 
-    params:
-    * bits: List[str]
+    :params bits: List of binary numbers represented as strings. 
+    :return: CO2 scrubber rating
+    :rtype: int
     """
     n = bits[0]
     for index, number in enumerate(n):
@@ -135,7 +136,7 @@ def co2_scrubber_rating(bits) -> int:
 def main():
     start = perf_counter()  # Start time
 
-    bits = file_reader("data/input3.txt")
+    bits = file_reader("data/input3'.txt")
 
     print("## PART 1 ##")
     # Gamma rate represented as binary
