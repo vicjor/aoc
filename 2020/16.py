@@ -50,5 +50,15 @@ print("(Pt 1) Ticket scanning error rate = {}".format(error_rate))
 
 
 # Part 2
+
 for invalid_ticket in invalid_tickets:
     nearby_tickets.remove(invalid_ticket)
+
+your_ticket = [int(x) for x in data[22].split(",")]
+print(your_ticket)
+
+
+fields = list(rules.keys())
+print(fields)
+
+for ticket in nearby_tickets:
