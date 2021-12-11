@@ -60,6 +60,7 @@ def is_lowpoint(heightmap: List[str], row: int, col: int) -> bool:
         if point < int(heightmap[row+1][col]) and point < int(heightmap[row-1][col]) and point < int(heightmap[row][col+1]):
             return True
         return False
+    # For all cases that is not top, bot, left or right edge.
     else:
         if point < int(heightmap[row][col+1]) and point < int(heightmap[row+1][col]) and point < int(heightmap[row][col-1]) and point < int(heightmap[row-1][col]):
             return True
